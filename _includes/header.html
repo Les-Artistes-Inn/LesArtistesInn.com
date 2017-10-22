@@ -1,0 +1,49 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col text-left">
+        {{ site.title_left }}
+      </div>
+      <div class="col text-center">
+        {{ site.title_middle }}
+      </div>
+      <div class="col text-right">
+        {{ site.title_right }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-left">
+        {{ site.subtitle_left }}
+        {{ site.address_left }}
+        {{ site.city_left }}
+      </div>
+      <div class="col text-center">
+        {{ site.subtitle_middle }}
+        {{ site.address_middle }}
+      </div>
+      <div class="col text-right">
+        {{ site.subtitle_right }}
+        {{ site.address_right }}
+        {{ site.city_right }}
+      </div>
+    </div>
+
+
+    <span class="d-lg-none">
+      <input class="d-none" type="checkbox" id="nav-trigger" role="button" aria-controls="nav-trigger" aria-expanded="false" aria-label="Toggle navigation"/>
+      <label class="d-inline-block border rounded mx-0 my-0" id="nav-icon-border" for="nav-trigger">
+        <span class="mx-2 my-2" id="nav-icon"></span>
+      </label>
+
+      <div class="container d-none" id="nav-menu">
+        <div class="row">
+          {% include menu.html side="left" %}
+          <div class="col">
+          </div>
+          {% include menu.html side="right" %}
+        </div>
+      </div>
+    </span>
+
+  </div>
+</header>

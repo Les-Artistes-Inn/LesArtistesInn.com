@@ -1,0 +1,17 @@
+---
+title: Les Artistes Inn
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      {% capture index-left %}{% include_relative pages/index-left.md %}{% endcapture %}
+      {{ index-left | remove_first: "---" | remove_first: "published: false" | remove_first: "---" | markdownify }}
+    </div>
+    <div class="col">
+      {% capture index-right %}{% include_relative pages/index-right.md %}{% endcapture %}
+      {{ index-right | remove_first: "---" | remove_first: "published: false" | remove_first: "---" | markdownify }}
+    </div>
+  </div>
+</div>

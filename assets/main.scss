@@ -1,0 +1,38 @@
+---
+---
+
+
+// collapsible navigation menu without javascript using invisible checkbox
+#nav-trigger:checked ~ #nav-menu {
+  display: block !important; // show menu if checkbox checked
+}
+#nav-icon-border {
+  border: 1px solid rgb(64,32,0) !important;
+}
+#nav-icon {
+  background-image: url(icon-open.svg);
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+}
+#nav-trigger:checked ~ #nav-icon-border #nav-icon {
+  background-image: url(icon-close.svg);
+}
+
+p {
+  text-align: justify;
+}
+
+body {
+  background: rgb(224,224,192);
+  color: rgb(64,32,0);
+}
+
+a {
+  color: rgb(64,32,0);
+}
+
+a:hover {
+  color: rgb(112,96,64);
+}
