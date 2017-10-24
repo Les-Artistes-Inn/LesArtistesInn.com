@@ -2,7 +2,7 @@
 published: false
 ---
 
-# Welcome to Les Artistes Inn!
+# Welcome to Les Artistes!
 
 Located in the scenic and charming village of Del Mar, Les Artistes is within walking distance to the shops, restaurants and beaches. Each room is one-of-a-kind, uniquely designed and hand-crafted using the personalities and artwork of different famous artists for inspiration. Les Artistes is a great setting for vacations, special occasions, or just a quiet get-away.
 

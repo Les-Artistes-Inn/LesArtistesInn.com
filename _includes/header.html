@@ -1,30 +1,37 @@
 <header>
-  <div class="container">
+  <div class="container" id="title">
     <div class="row">
-      <div class="col text-left">
-        {{ site.title_left }}
-      </div>
-      <div class="col text-center">
-        {{ site.title_middle }}
-      </div>
-      <div class="col text-right">
-        {{ site.title_right }}
+      <div class="col">
+        <span id="title-logo"></span>
       </div>
     </div>
-    <div class="row">
+    <div class="row d-none d-lg-flex">
       <div class="col text-left">
-        {{ site.subtitle_left }}
-        {{ site.address_left }}
-        {{ site.city_left }}
+        <h4 class="my-0">
+          {{ site.subtitle_left }}
+        </h4>
+        <p class="mt-0 mb-2" style="text-align: inherit;">
+          {{ site.address_left }}
+        <br>
+          {{ site.city_left }}
+        </p>
       </div>
       <div class="col text-center">
-        {{ site.subtitle_middle }}
-        {{ site.address_middle }}
+        <p class="my-0 pt-1" style="text-align: inherit;">
+          {{ site.email_middle }}
+        <br>
+          {{ site.phone_middle }}
+        </p>
       </div>
       <div class="col text-right">
-        {{ site.subtitle_right }}
-        {{ site.address_right }}
-        {{ site.city_right }}
+        <h4 class="my-0">
+          {{ site.subtitle_right }}
+        </h4>
+        <p class="mt-0 mb-2" style="text-align: inherit;">
+          {{ site.address_right }}
+        <br>
+          {{ site.city_right }}
+        </p>
       </div>
     </div>
 
