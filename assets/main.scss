@@ -31,10 +31,13 @@
 
 // title
 #title {
-  background-color: rgb(255,255,255);
   color: rgb(0,0,0);
   stroke: rgb(0,0,0);
   vertical-align: bottom;
+  border-width: 0 0.75rem 0.75rem 0.75rem;
+  border-image-source: url("border.svg");
+  border-image-slice: 20 20 20 20 fill;
+  border-image-repeat: round;
 }
 
 #title-logo {
@@ -92,4 +95,13 @@ a {
 
 a:hover {
   color: rgb(112,96,64);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-width: 0.75rem;
+  border-image-source: url("border.svg");
+  border-image-slice: 20 fill;
+  border-image-repeat: round;
 }
