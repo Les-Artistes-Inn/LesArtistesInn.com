@@ -7,7 +7,28 @@
 
     {% include header.html %}
 
-    <div class="container">
+    {%- capture image_replacement_string -%}
+      {%- assign images = content | split: '<img' -%}
+      {%- for image in images -%}
+        {%- unless forloop.first -%}
+          {{- image | split: '/>' | first -}}
+          {%- unless forloop.last -%}<>{%- endunless -%}
+        {%- endunless -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign image_replacement = image_replacement_string | split: '<>' -%}
+    {%- for img_attributes in image_replacement -%}
+      {%- capture image_replacement_source -%}
+        <img{{ img_attributes }}/>
+      {%- endcapture -%}
+      {%- assign image_replacement_url = img_attributes | remove_first: ' src="' | split: '"' | first | replace_first: '.jpg','_large.jpg' -%}
+      {%- capture image_replacement_target -%}
+        <a href="{{ image_replacement_url }}"><img{{ img_attributes }}/></a>
+      {%- endcapture -%}
+      {%- assign content = content | replace: image_replacement_source, image_replacement_target -%}
+    {%- endfor -%}
+
+    <div class="container pt-2">
       <div class="row">
         <div id="nav-page-left" class="col-2 d-none d-lg-block px-0 text-left">
           {% include menu.html side="left" %}

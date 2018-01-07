@@ -2,6 +2,8 @@
 published: false
 ---
 
+![Secret Garden Inn](/assets/images/index/2_large.jpg)
+
 # Welcome to Secret Garden!
 
 We are located between 11th and 12th street, at 1140 Camino Del Mar, behind Cafe Secret, close to shopping, fine restaurants, and the beautiful beaches of Del Mar, the Torrey Pines Golf Course, and the Del Mar Thoroughbred Club.

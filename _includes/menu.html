@@ -9,7 +9,7 @@
 {% endif %}
 <nav id="menu-{{ include.side }}" class="nav flex-column">
 
-  <a class="nav-link" href="{{ "/" | relative_url }}">{{ menu_title }}</a>
+  <a class="nav-link pt-0" href="{{ "/" | relative_url }}">{{ menu_title }}</a>
 
   {% if submenu_pages %}
     {% for path in submenu_pages %}
