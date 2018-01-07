@@ -2,7 +2,7 @@
 published: false
 ---
 
-![Secret Garden Inn](/assets/images/index/2_large.jpg)
+![Secret Garden Inn](/assets/images/index/2.jpg)
 
 # Welcome to Secret Garden!
 

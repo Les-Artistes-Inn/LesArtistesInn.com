@@ -2,7 +2,7 @@
 published: false
 ---
 
-![Les Artistes Inn](/assets/images/index/1_large.jpg)
+![Les Artistes Inn](/assets/images/index/1.jpg)
 
 # Welcome to Les Artistes!
 
