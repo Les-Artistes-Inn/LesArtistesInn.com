@@ -13,6 +13,28 @@
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
 
+  <script>
+    function responsiveNavDisplay(checkbox) {
+      if(checkbox.checked) {
+        document.getElementById("nav-menu-left")
+          .appendChild(document.getElementById("menu-left"));
+        document.getElementById("nav-menu-right")
+          .appendChild(document.getElementById("menu-right"));
+      } else {
+        document.getElementById("nav-page-left")
+          .appendChild(document.getElementById("menu-left"));
+        document.getElementById("nav-page-right")
+          .appendChild(document.getElementById("menu-right"));
+      }
+    }
+    window.onresize = function() {
+      var navTrigger = document.getElementById("nav-trigger");
+      if(navTrigger.checked) {
+        navTrigger.click();
+      }
+    }
+  </script>
+
   {% seo %}
 
 </head>

@@ -1,33 +1,43 @@
-<header>
-  <div class="container" id="title">
-    <div class="row">
-      <div class="col">
-        <span id="title-logo"></span>
+<header id="nav-header">
+  <div id="nav-container" class="container position-relative">
+    <div id="title-logo" class="row">
+      <div id="title-logo-left">
+        {% include logo-left.svg %}
+      </div>
+      <div id="title-logo-right" class="d-none d-lg-block">
+        {% include logo-right.svg %}
       </div>
     </div>
-    <div class="row d-none d-lg-flex">
-      <div class="col text-left">
-        <h4 class="my-0">
+
+    <div class="row d-lg-none">
+      <div class="w-50">
+        {% include logo-alternate.svg %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col p-0">
+        <h4 class="my-0 text-left d-none d-lg-block">
           {{ site.subtitle_left }}
         </h4>
-        <p class="mt-0 mb-2" style="text-align: inherit;">
+        <p class="my-0 text-left">
           {{ site.address_left }}
         <br>
           {{ site.city_left }}
         </p>
       </div>
-      <div class="col text-center">
-        <p class="my-0 pt-1" style="text-align: inherit;">
+      <div class="col p-0">
+        <p class="my-0 pt-lg-1 text-right text-lg-center">
           {{ site.email_middle }}
         <br>
           {{ site.phone_middle }}
         </p>
       </div>
-      <div class="col text-right">
-        <h4 class="my-0">
+      <div class="col p-0 d-none d-lg-block">
+        <h4 class="my-0 text-right ">
           {{ site.subtitle_right }}
         </h4>
-        <p class="mt-0 mb-2" style="text-align: inherit;">
+        <p class="my-0 text-right ">
           {{ site.address_right }}
         <br>
           {{ site.city_right }}
@@ -35,22 +45,21 @@
       </div>
     </div>
 
-
-    <span class="d-lg-none">
-      <input class="d-none" type="checkbox" id="nav-trigger" role="button" aria-controls="nav-trigger" aria-expanded="false" aria-label="Toggle navigation"/>
-      <label class="d-inline-block border rounded mx-0 my-0" id="nav-icon-border" for="nav-trigger">
-        <span class="mx-2 my-2" id="nav-icon"></span>
+    <nav id="nav-menu-container" class="text-right d-inline-block d-lg-none">
+      <input type="checkbox" onchange="responsiveNavDisplay(this)" id="nav-trigger" class="d-none"/>
+      <label for="nav-trigger" id="nav-trigger-label" class="m-2 ">
+        {% include icon-menu.svg %}
       </label>
 
       <div class="container d-none" id="nav-menu">
         <div class="row">
-          {% include menu.html side="left" %}
-          <div class="col">
+          <div class="col px-0 text-left" id="nav-menu-left">
           </div>
-          {% include menu.html side="right" %}
+          <div class="col px-0 text-right" id="nav-menu-right">
+          </div>
         </div>
       </div>
-    </span>
+    </nav>
 
   </div>
 </header>

@@ -1,13 +1,14 @@
 title: Les Artistes Inn
 description: An inspired place to stay
 markdown: kramdown
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 include:
   - pages
 title_left: Les Artistes Inn
+subtitle_alternate: And Secret Garden Inn of Del Mar
 subtitle_left: An Inspired Place to Stay
 address_left: 944 Camino Del Mar
 city_left: Del Mar, CA 92014

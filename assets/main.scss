@@ -1,51 +1,54 @@
 ---
 ---
 
-
-
-
-
-
-// collapsible navigation menu without javascript using invisible checkbox
+#nav-menu-container {
+  @media (max-width: 992px - 1) {
+    position: absolute;
+    z-index: 100;
+    top: 0.4375rem;
+    right: 1rem;
+    border: 1px solid rgb(160, 160, 160);
+    border-radius: .25rem;
+    background-color: rgb(255, 255, 255);
+  }
+}
+#nav-trigger-label {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
 #nav-trigger:checked ~ #nav-menu {
-  display: block !important; // show menu if checkbox checked
-}
-#nav-icon-border {
-  border: 1px solid rgb(0,0,0) !important;
-}
-#nav-icon {
-  background-image: url(icon-open.svg);
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-}
-#nav-trigger:checked ~ #nav-icon-border #nav-icon {
-  background-image: url(icon-close.svg);
+  display: block !important;
 }
 
 
 
-
-
-
-// title
-#title {
-  color: rgb(0,0,0);
-  stroke: rgb(0,0,0);
-  vertical-align: bottom;
-  border-width: 0 0.75rem 0.75rem 0.75rem;
+img, #nav-container {
+  width: 100%;
+  height: auto;
+  border-width: 1rem;
   border-image-source: url("border.svg");
-  border-image-slice: 20 20 20 20 fill;
+  border-image-slice: 20 fill;
   border-image-repeat: round;
 }
 
-#title-logo {
-  background-image: url(logo.svg);
-  background-size: 100% auto;
-  display: inline-block;
-  width: inherit;
-  height: 7em;
+
+// title
+#nav-container {
+  color: rgb(0,0,0);
+  border-top-width: 0;
+}
+
+#title-logo-left {
+  width: 45%;
+  @media (max-width: 992px - 1) {
+    width: 80%;
+  }
+  margin-bottom: -3em;
+}
+
+#title-logo-right {
+  width: 55%;
   margin-bottom: -3em;
 }
 
@@ -66,7 +69,7 @@ body {
 }
 
 h1 h2 h3 h4 h5 h6 {
-  font-family: "quando", serif;
+  font-family: "Quando", serif;
 }
 
 h1 {
@@ -95,13 +98,4 @@ a {
 
 a:hover {
   color: rgb(112,96,64);
-}
-
-img {
-  width: 100%;
-  height: auto;
-  border-width: 0.75rem;
-  border-image-source: url("border.svg");
-  border-image-slice: 20 fill;
-  border-image-repeat: round;
 }
