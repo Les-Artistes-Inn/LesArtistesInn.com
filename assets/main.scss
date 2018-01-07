@@ -1,16 +1,77 @@
 ---
 ---
+$breakpoint-sm: 576px;
+$breakpoint-lg: 992px;
 
-#nav-menu-container {
-  @media (max-width: 992px - 1) {
-    position: absolute;
-    z-index: 100;
-    top: 0.5rem;
-    right: 0rem;
-    border: 1px solid rgb(160, 160, 160);
-    border-radius: .25rem;
-    background-color: rgb(255, 255, 255);
+// borders
+img, #nav-header {
+  border-width: 1rem;
+  border-image-source: url("border.svg");
+  border-image-slice: 20 fill;
+  border-image-repeat: round;
+}
+
+
+
+
+// title
+#nav-header {
+  color: rgb(0,0,0);
+  border-top-width: 0;
+  @media (max-width: $breakpoint-sm - 1) {
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
+}
+
+#title-logo-left {
+  width: 45%;
+  margin-bottom: -5%;
+  @media (max-width: $breakpoint-lg - 1) {
+    width: 90%;
+    margin-bottom: -9%;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#title-logo-right {
+  width: 55%;
+  margin-bottom: -5%;
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+#title-logo-subtitle {
+  height: 2rem;
+  margin-bottom: -0.33rem;
+  svg {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+#title-text .h4 {
+  font-size: 1.375rem;
+}
+
+
+
+// responsive nav
+#nav-menu-container {
+  position: absolute;
+  z-index: 100;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid rgb(160, 160, 160);
+  border-radius: .25rem;
+  background-color: rgb(255, 255, 255);
 }
 #nav-trigger-label {
   height: 1.5rem;
@@ -20,45 +81,6 @@
 #nav-trigger:checked ~ #nav-menu {
   display: block !important;
 }
-
-
-
-img, #nav-container {
-  width: 100%;
-  height: auto;
-  border-width: 1rem;
-  border-image-source: url("border.svg");
-  border-image-slice: 20 fill;
-  border-image-repeat: round;
-}
-
-
-// title
-#nav-container {
-  color: rgb(0,0,0);
-  border-top-width: 0;
-}
-
-#title-logo-left {
-  width: 45%;
-  margin-bottom: -5%;
-  @media (max-width: 992px - 1) {
-    width: 90%;
-    margin-bottom: -9%;
-  }
-}
-
-#title-logo-right {
-  width: 55%;
-  margin-bottom: -5%;
-}
-
-#title-logo-subtitle {
-  width: 60%;
-  margin-bottom: -2%;
-}
-
-
 
 
 
@@ -104,4 +126,9 @@ a {
 
 a:hover {
   color: rgb(112,96,64);
+}
+
+img {
+  width: 100%;
+  height: auto;
 }

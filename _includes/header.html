@@ -1,5 +1,4 @@
-<header id="nav-header">
-  <div id="nav-container" class="container position-relative">
+<header id="nav-header" class="container position-relative">
     <div class="row">
       <div id="title-logo-left">
         {% include logo-left.svg %}
@@ -15,11 +14,11 @@
       </div>
     </div>
 
-    <div class="row">
+    <div id="title-text" class="row">
       <div class="col p-0">
-        <h4 class="my-0 text-left d-none d-lg-block">
+        <p class="h4 my-0 text-left d-none d-lg-block">
           {{ site.subtitle_left }}
-        </h4>
+        </p>
         <p class="my-0 text-left">
           {{ site.address_left }}
         <br>
@@ -34,9 +33,9 @@
         </p>
       </div>
       <div class="col p-0 d-none d-lg-block">
-        <h4 class="my-0 text-right ">
+        <p class="h4 my-0 text-right ">
           {{ site.subtitle_right }}
-        </h4>
+        </p>
         <p class="my-0 text-right ">
           {{ site.address_right }}
         <br>
@@ -60,6 +59,4 @@
         </div>
       </div>
     </nav>
-
-  </div>
 </header>
