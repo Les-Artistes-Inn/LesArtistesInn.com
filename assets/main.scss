@@ -6,9 +6,7 @@ $breakpoint-lg: 992px;
 // borders
 #content img, #nav-header {
   border-width: 1rem;
-  border-image-source: url("border.svg");
-  border-image-slice: 20 fill;
-  border-image-repeat: round;
+  border-image: url("border.svg") 7% fill round;
 }
 
 
