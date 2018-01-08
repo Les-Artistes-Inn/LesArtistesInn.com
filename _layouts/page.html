@@ -3,12 +3,19 @@ layout: default
 ---
 <article>
 
-  <div id="photos" class="row justify-content-center align-items-center">
+  <div class="row justify-content-center align-items-center">
     {% assign page_title = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" %}
+    {% assign all_static_files = "" %}
+    {% for file in site.static_files %}
+      {% assign all_static_files = all_static_files | append: file.path | append: "<>" %}
+    {% endfor %}
     {% for file in site.static_files %}
       {% if file.extname == ".jpg" and file.path contains "/assets/images/" and file.path contains page_title %}
         {% unless file.path contains "_large" %}
-          <img src="{{ file.path | relative_url }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
+          {% assign file_large = file.path | remove_first: ".jpg" | append: "_large" %}
+          {% if all_static_files contains file_large %}
+            <img src="{{ file.path | relative_url }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
+          {% endif %}
         {% endunless %}
       {% endif %}
     {% endfor %}
