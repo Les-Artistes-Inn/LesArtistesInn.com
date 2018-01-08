@@ -1,5 +1,6 @@
 ---
 title: Penthouse
+subtitle: Secret Garden Inn
 layout: page
 ---
 

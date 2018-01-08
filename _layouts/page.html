@@ -3,8 +3,22 @@ layout: default
 ---
 <article>
 
+  <div id="photos" class="row justify-content-center align-items-center">
+    {% assign page_title = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" %}
+    {% for file in site.static_files %}
+      {% if file.extname == ".jpg" and file.path contains "/assets/images/" and file.path contains page_title %}
+        {% unless file.path contains "_large" %}
+          <img src="{{ file.path | relative_url }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
   <header>
-    <h1>{{ page.title | escape }}</h1>
+    <h1 {% if page.subtitle %}class="mb-0"{% endif %}>{{ page.title | escape }}</h1>
+    {% if page.subtitle %}
+      <h2 class="h5 font-italic">{{ page.subtitle | escape }}</h2>
+    {% endif %}
   </header>
 
   <div>

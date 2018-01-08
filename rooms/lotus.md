@@ -1,5 +1,6 @@
 ---
 title: Lotus
+subtitle: Secret Garden Inn
 layout: page
 ---
 

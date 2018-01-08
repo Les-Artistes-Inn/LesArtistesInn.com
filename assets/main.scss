@@ -4,7 +4,7 @@ $breakpoint-sm: 576px;
 $breakpoint-lg: 992px;
 
 // borders
-img, #nav-header {
+#content img, #nav-header {
   border-width: 1rem;
   border-image-source: url("border.svg");
   border-image-slice: 20 fill;
@@ -111,12 +111,6 @@ h3 {
 }
 h4 {
   font-size: 1.375rem;
-}
-h5 {
-  font-size: 1.25rem;
-}
-h6 {
-  font-size: 1.125rem;
 }
 
 a {

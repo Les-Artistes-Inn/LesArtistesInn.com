@@ -1,5 +1,6 @@
 ---
 title: Frida
+subtitle: Secret Garden Inn
 layout: page
 ---
 

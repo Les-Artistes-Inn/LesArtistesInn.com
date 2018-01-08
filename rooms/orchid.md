@@ -1,5 +1,6 @@
 ---
 title: Orchid
+subtitle: Secret Garden Inn
 layout: page
 ---
 

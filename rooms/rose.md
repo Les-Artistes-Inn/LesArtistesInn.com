@@ -1,5 +1,6 @@
 ---
 title: Rose
+subtitle: Secret Garden Inn
 layout: page
 ---
 

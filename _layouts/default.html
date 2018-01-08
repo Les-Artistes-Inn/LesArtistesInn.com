@@ -21,9 +21,11 @@
       {%- capture image_replacement_source -%}
         <img{{ img_attributes }}/>
       {%- endcapture -%}
-      {%- assign image_replacement_url = img_attributes | remove_first: ' src="' | split: '"' | first | replace_first: '.jpg','_large.jpg' -%}
+      {%- assign image_url = img_attributes | remove_first: ' src="' | split: '"' | first -%}
+      {%- assign image_relative_url = image_url | relative_url -%}
+      {%- assign image_replacement_url = image_url | replace_first: '.jpg','_large.jpg' -%}
       {%- capture image_replacement_target -%}
-        <a href="{{ image_replacement_url }}"><img{{ img_attributes }}/></a>
+        <a href="{{ image_replacement_url | relative_url }}"><img{{ img_attributes | replace: image_url, image_relative_url }}/></a>
       {%- endcapture -%}
       {%- assign content = content | replace: image_replacement_source, image_replacement_target -%}
     {%- endfor -%}
