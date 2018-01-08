@@ -1,6 +1,7 @@
 ---
 title: Furo
 layout: page
+side: left
 ---
 
 The Furo room uses inspiration from Japanese masters such as Hokusai and Suzuki Harunobu for the art and style.

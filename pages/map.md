@@ -1,7 +1,7 @@
 ---
 title: Map & Directions
 layout: page
-side: left
+side: both
 ---
 
 [Directions from San Diego airport](http://maps.google.com/maps?daddr=944+Camino+Del+Mar,+Del+Mar,+CA+92014+(Les+Artistes+Inn+of+Del+Mar)&geocode=Cfk1bB1UlCFcFXnW9gEdNLIC-SHczBZj2AZSXg&dirflg=&saddr=San+Dego+Airport&f=d&hl=en&sll=32.954971,-117.263775&sspn=0.004303,0.006909&cid=6796502314100640988&ie=UTF8&z=11)

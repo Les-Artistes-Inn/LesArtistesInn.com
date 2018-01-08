@@ -1,37 +1,29 @@
-{% if include.side == "left" %}
-  {% assign menu_title = site.title_left %}
-  {% assign menu_pages = site.menu_left %}
-  {% assign submenu_pages = site.submenu_left %}
-{% elsif include.side == "right" %}
-  {% assign menu_title = site.title_right %}
-  {% assign menu_pages = site.menu_right %}
-  {% assign submenu_pages = site.submenu_right %}
-{% endif %}
 <nav id="menu-{{ include.side }}" class="nav flex-column">
 
-  <a class="nav-link pt-0" href="{{ "/" | relative_url }}">{{ menu_title }}</a>
+  <a class="nav-link pt-0" href="{{ "/" | relative_url }}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
 
-  {% if submenu_pages %}
-    {% for path in submenu_pages %}
-      {% assign current_page = site.pages | where: "path", path | first %}
-      {% assign current_link = current_page.url | relative_url %}
-      <a class="nav-link py-0 mx-4" href="{{ current_link }}">
-        {{ current_page.title | escape }}
-      </a>
-    {% endfor %}
-  {% endif %}
-
-  {% if menu_pages %}
-    {% for path in menu_pages %}
-      {% assign current_page = site.pages | where: "path", path | first %}
-      {% if current_page.redirect_to %}
-        {% assign current_link = current_page.redirect_to %}
-      {% else %}
-        {% assign current_link = current_page.url | relative_url %}
+  {% for page in site.pages %}
+    {% if page.path contains "rooms/" %}
+      {% if page.side == include.side or page.side == "both" %}
+        <a class="nav-link py-0 mx-4" href="{{ page.url | relative_url }}">
+          {{ page.title | escape }}
+        </a>
       {% endif %}
-      <a class="nav-link" href="{{ current_link }}">
-        {{ current_page.title | escape }}
-      </a>
-    {% endfor %}
-  {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% for page in site.pages %}
+    {% if page.path contains "pages/" %}
+      {% if page.side == include.side or page.side == "both" %}
+        {% if page.redirect_to %}
+          {% assign link = page.redirect_to %}
+        {% else %}
+          {% assign link = page.url | relative_url %}
+        {% endif %}
+        <a class="nav-link" href="{{ link }}">
+          {{ page.title | escape }}
+        </a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 </nav>

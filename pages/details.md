@@ -1,7 +1,7 @@
 ---
 title: Architectural Details
 layout: page
-side: left
+side: right
 ---
 
 Secret Garden Inn

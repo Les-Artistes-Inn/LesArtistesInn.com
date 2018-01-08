@@ -1,6 +1,7 @@
 ---
 title: Monet
 layout: page
+side: left
 ---
 
 The Monet room uses the influence of the French impressionist artist Claude Monet.

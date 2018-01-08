@@ -2,6 +2,7 @@
 title: Orchid
 subtitle: Secret Garden Inn
 layout: page
+side: right
 ---
 
 A room done in Oriental style with Shoji screen lighting and hardwood floors.

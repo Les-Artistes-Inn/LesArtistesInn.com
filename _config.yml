@@ -5,51 +5,15 @@ plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-include:
-  - pages
 title_left: Les Artistes Inn
 subtitle_alternate: And Secret Garden Inn of Del Mar
 subtitle_left: An Inspired Place to Stay
 address_left: 944 Camino Del Mar
 city_left: Del Mar, CA 92014
-menu_left:
-  - pages/courtyard.md
-  - pages/policies.md
-  - pages/map.md
-  - pages/architecture.md
-submenu_left:
-  - rooms/botero.md
-  - rooms/delempicka.md
-  - rooms/erte.md
-  - rooms/furo.md
-  - rooms/gaugin.md
-  - rooms/monet.md
-  - rooms/okeefe.md
-  - rooms/remington.md
-  - rooms/rivera.md
-  - rooms/vangogh.md
-  - rooms/vettriano.md
-  - rooms/zen.md
-title_middle: and
 email_middle: lesartistesinn@gmail.com
 phone_middle: (858) 755-4646
 title_right: Secret Garden Inn
 subtitle_right: Of Del Mar, Bed & Breakfast
 address_right: 1140 Camino Del Mar
 city_right: Del Mar, CA 92014
-menu_right:
-  - pages/video.md
-  - pages/cafe.md
-  - pages/courtyard.md
-  - pages/policies.md
-  - pages/map.md
-  - pages/details.md
-  - pages/condo.md
-  - pages/facebook.md
-submenu_right:
-  - rooms/rose.md
-  - rooms/orchid.md
-  - rooms/lotus.md
-  - rooms/penthouse.md
-  - rooms/frida.md
 # google_analytics: UA-xxxxxxxx-2

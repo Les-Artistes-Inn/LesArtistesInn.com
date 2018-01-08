@@ -1,6 +1,7 @@
 ---
 title: Remington
 layout: page
+side: left
 ---
 
 Frederic Remington was an American painter, illustrator, and sculptor, who specialized in depictions of the Old West.

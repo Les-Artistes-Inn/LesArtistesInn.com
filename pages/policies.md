@@ -1,7 +1,7 @@
 ---
 title: Our Policies
 layout: page
-side: left
+side: both
 ---
 
 ***All rooms at Les Artistes Inn and Secret Garden Inn are non-smoking.***

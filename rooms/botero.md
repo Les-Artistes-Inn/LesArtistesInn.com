@@ -1,6 +1,7 @@
 ---
 title: Botero
 layout: page
+side: left
 ---
 
 The Botero room is a ground floor room that uses the art of Fernando Botero, the Columbian painter, for inspiration.
