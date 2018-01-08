@@ -2,7 +2,8 @@
 
   <a class="nav-link pt-0" href="{{ "/" | relative_url }}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
 
-  {% for page in site.pages %}
+  {% assign pages = site.pages | sort: "order" %}
+  {% for page in pages %}
     {% if page.path contains "rooms/" %}
       {% if page.side == include.side or page.side == "both" %}
         <a class="nav-link py-0 mx-4" href="{{ page.url | relative_url }}">
@@ -11,8 +12,7 @@
       {% endif %}
     {% endif %}
   {% endfor %}
-
-  {% for page in site.pages %}
+  {% for page in pages %}
     {% if page.path contains "pages/" %}
       {% if page.side == include.side or page.side == "both" %}
         {% if page.redirect_to %}

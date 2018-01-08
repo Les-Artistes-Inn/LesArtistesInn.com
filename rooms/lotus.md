@@ -3,6 +3,7 @@ title: Lotus
 subtitle: Secret Garden Inn
 layout: page
 side: right
+order: 3
 ---
 
 This room is done in Balinese style with a king size bed and twin day bed.
