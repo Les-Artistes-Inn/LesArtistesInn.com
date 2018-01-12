@@ -3,8 +3,7 @@ layout: default
 ---
 <article>
 
-  {%- assign page_title = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" -%}
-  {%- assign page_image_dir = page_title | prepend: "/assets/images/" -%}
+  {%- assign page_image_dir = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" | prepend: "/assets/images/" -%}
   {%- assign all_static_files = "" -%}
   {%- for file in site.static_files -%}
     {%- assign all_static_files = all_static_files | append: file.path | append: "<br>" -%}
@@ -13,11 +12,11 @@ layout: default
     <div class="mb-3 row justify-content-center align-items-center">
   {% endif %}
   {%- for file in site.static_files -%}
-    {%- if file.extname == ".jpg" and file.path contains "/assets/images/" and file.path contains page_title -%}
+    {%- if file.extname == ".jpg" and file.path contains page_image_dir -%}
       {%- unless file.path contains "_large" -%}
         {%- assign file_large = file.path | remove_first: ".jpg" | append: "_large" -%}
         {% if all_static_files contains file_large %}
-          <img src="{{ file.path }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
+          <img src="{{ file.path }}" alt="{{ page.title }} {{ file.path | remove_first: page_image_dir | remove_first: "/" | remove_first: ".jpg" }}"/>
         {% endif %}
       {%- endunless -%}
     {%- endif -%}

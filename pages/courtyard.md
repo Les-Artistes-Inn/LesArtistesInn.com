@@ -1,8 +1,6 @@
 ---
 title: Courtyard
-layout: default
+layout: page
 side: left
 order: 2
 ---
-
-only photos
