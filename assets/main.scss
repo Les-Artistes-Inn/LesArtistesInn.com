@@ -5,8 +5,12 @@ $breakpoint-lg: 992px;
 
 // borders
 #content img, #nav-header {
+  background-color: #ffffff;
+  background-clip: padding-box;
   border-width: 1rem;
-  border-image: url("border.svg") 7% fill round;
+  border-image: url("border.svg") 70 repeat;
+  border-color: #ffffff;
+  border-style: solid;
 }
 
 
