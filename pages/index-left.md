@@ -2,7 +2,9 @@
 published: false
 ---
 
+<div class="d-flex justify-content-center" markdown="1">
 ![Les Artistes Inn](/assets/images/index/1.jpg)
+</div>
 
 # Welcome to Les Artistes!
 

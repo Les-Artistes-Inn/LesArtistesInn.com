@@ -2,7 +2,9 @@
 published: false
 ---
 
+<div class="d-flex justify-content-center" markdown="1">
 ![Secret Garden Inn](/assets/images/index/2.jpg)
+</div>
 
 # Welcome to Secret Garden!
 
