@@ -17,7 +17,7 @@ layout: default
       {%- unless file.path contains "_large" -%}
         {%- assign file_large = file.path | remove_first: ".jpg" | append: "_large" -%}
         {% if all_static_files contains file_large %}
-          <img src="{{ file.path | relative_url }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
+          <img src="{{ file.path }}" alt="{{ page.title }} {{ file.path | remove_first: "/assets/images/" | remove_first: page_title | remove_first: "/" | remove_first: ".jpg" }}"/>
         {% endif %}
       {%- endunless -%}
     {%- endif -%}
