@@ -53,6 +53,7 @@ $breakpoint-lg: 992px;
   z-index: 99;
   svg {
     height: 2rem;
+    max-width: 100%;
     display: block;
   }
 }
