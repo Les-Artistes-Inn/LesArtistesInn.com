@@ -9,7 +9,7 @@ layout: default
       {% capture index-left %}{% include_relative pages/index-left.md %}{% endcapture %}
       {{ index-left | remove_first: "---" | remove_first: "published: false" | remove_first: "---" | markdownify }}
     </div>
-    <div class="col-12 col-md-6">
+    <div id="right" class="col-12 col-md-6">
       {% capture index-right %}{% include_relative pages/index-right.md %}{% endcapture %}
       {{ index-right | remove_first: "---" | remove_first: "published: false" | remove_first: "---" | markdownify }}
     </div>

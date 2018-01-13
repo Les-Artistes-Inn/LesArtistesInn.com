@@ -1,6 +1,6 @@
 <nav id="menu-{{ include.side }}" class="nav flex-column">
 
-  <a class="nav-link pt-0" href="{{ "/" | relative_url }}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
+  <a class="nav-link pt-0" href="{{ "/" | relative_url }}{%- if include.side == "right"-%}#right{%- endif -%}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
 
   {%- assign pages = site.pages | sort: "order" -%}
   {%- for page in pages -%}

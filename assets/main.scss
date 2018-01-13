@@ -36,7 +36,6 @@ $breakpoint-lg: 992px;
     margin-bottom: -9%;
   }
   svg {
-    height: 100%;
     width: 100%;
   }
 }
@@ -45,17 +44,16 @@ $breakpoint-lg: 992px;
   width: 55%;
   margin-bottom: -5%;
   svg {
-    height: 100%;
     width: 100%;
   }
 }
 
 #title-logo-subtitle {
-  height: 2rem;
   margin-bottom: -0.33rem;
+  z-index: 99;
   svg {
-    height: inherit;
-    width: inherit;
+    height: 2rem;
+    display: block;
   }
 }
 
