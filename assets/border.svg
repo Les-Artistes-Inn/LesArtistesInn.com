@@ -1,8 +1,8 @@
 <svg viewBox="0 0 1024.000000 1024.000000" height="1024px" width="1024px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="blur" x="0" y="0" height="110%" width="110%">
-      <feColorMatrix result="matrixOut" in="SourceGraphic" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
-      <feGaussianBlur in="matrixOut" stdDeviation="2" />
+      <feColorMatrix result="matrixOut" in="SourceAlpha" type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 1 0" />
+      <feGaussianBlur in="matrixOut" stdDeviation="5" />
     </filter>
   </defs>
   <use xlink:href="#border" x="15" y="15" filter="url(#blur)"  />
