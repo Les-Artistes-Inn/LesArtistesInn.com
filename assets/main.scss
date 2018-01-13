@@ -3,6 +3,8 @@
 $breakpoint-sm: 576px;
 $breakpoint-lg: 992px;
 
+
+
 // borders
 #content img, #nav-header {
   background-color: #ffffff;
@@ -12,7 +14,6 @@ $breakpoint-lg: 992px;
   border-color: #ffffff;
   border-style: solid;
 }
-
 
 
 
@@ -27,7 +28,6 @@ $breakpoint-lg: 992px;
     padding-right: 30px;
   }
 }
-
 #title-logo-left {
   width: 45%;
   margin-bottom: -5%;
@@ -39,7 +39,6 @@ $breakpoint-lg: 992px;
     width: 100%;
   }
 }
-
 #title-logo-right {
   width: 55%;
   margin-bottom: -5%;
@@ -47,7 +46,6 @@ $breakpoint-lg: 992px;
     width: 100%;
   }
 }
-
 #title-logo-subtitle {
   margin-bottom: -0.33rem;
   z-index: 99;
@@ -56,7 +54,10 @@ $breakpoint-lg: 992px;
     display: block;
   }
 }
-
+#title-logo-em svg {
+  height: 1rem;
+  vertical-align: bottom;
+}
 #title-text .h4 {
   font-size: 1.375rem;
 }
@@ -89,17 +90,14 @@ p {
   text-align: justify;
   line-height: 1.25;
 }
-
 body {
   background: rgb(224,224,192);
   color: rgb(64,32,0);
   font-family: "Judson", serif;
 }
-
 h1 h2 h3 h4 h5 h6 {
   font-family: "Quando", serif;
 }
-
 h1 {
   font-size: 2rem;
 }
@@ -112,12 +110,10 @@ h3 {
 h4 {
   font-size: 1.375rem;
 }
-
 a {
   color: rgb(64,32,0);
   line-height: 1.25;
 }
-
 a:hover {
   color: rgb(112,96,64);
 }

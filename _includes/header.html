@@ -35,8 +35,8 @@
       </div>
       <div class="col-7 col-lg-4 p-0">
         <p class="my-0 pt-lg-1 text-right text-lg-center">
-          {{ site.email_middle }}
-        <br>
+          {%- capture email -%}{% include logo-email.svg %}{%- endcapture -%}
+          <span id="title-logo-em">{{ email | strip }}</span><br>
           {{ site.phone_middle }}
         </p>
       </div>
