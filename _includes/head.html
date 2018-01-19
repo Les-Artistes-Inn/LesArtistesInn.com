@@ -27,12 +27,12 @@
           .appendChild(document.getElementById("menu-right"));
       }
     }
-    window.onresize = function() {
+    window.matchMedia("(min-width: 992px)").addListener(function() {
       var navTrigger = document.getElementById("nav-trigger");
       if(navTrigger.checked) {
         navTrigger.click();
       }
-    }
+    })
   </script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.9.1/baguetteBox.min.css" integrity="sha256-GrjD69ygFQ+lWqlAOC6LzoNUE4jKrvgkQJrtIukHAi4=" crossorigin="anonymous" />
