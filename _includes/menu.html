@@ -6,12 +6,13 @@
   {%- for page in pages -%}
     {%- if page.path contains "rooms/" -%}
       {% if page.side == include.side or page.side == "both" %}
-        <a class="nav-link py-0 mx-4" href="{{ page.url | relative_url }}">
+        <a class="nav-link py-0{% if include.side == "left" %} ml-4{% else if include.side == "right" %} mr-4{% endif %}" href="{{ page.url | relative_url }}">
           {{ page.title | escape }}
         </a>
       {% endif %}
     {%- endif -%}
   {%- endfor -%}
+  {%- assign first = true -%}
   {%- for page in pages -%}
     {%- if page.path contains "pages/" -%}
       {% if page.side == include.side or page.side == "both" %}
@@ -20,7 +21,7 @@
         {%- else -%}
           {%- assign link = page.url | relative_url %}
         {%- endif -%}
-        <a class="nav-link" href="{{ link }}">
+        <a class="nav-link{% if include.side == "left" and first %}{% assign first = false %} mt-1{% endif %}" href="{{ link }}">
           {{ page.title | escape }}
         </a>
       {% endif %}
