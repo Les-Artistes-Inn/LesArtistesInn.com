@@ -1,6 +1,5 @@
 title: Les Artistes Inn
 description: An inspired place to stay
-markdown: kramdown
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
