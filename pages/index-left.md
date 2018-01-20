@@ -13,3 +13,7 @@ Located in the scenic and charming village of Del Mar, Les Artistes is within wa
 Rates are from $135.00 to $250.00 per night plus tax. Winter rates are typically lower than Summer rates so please call for more information. Prices are subject to change so please call for more information.
 
 ***All rooms at Les Artistes Inn are non-smoking.***
+
+<div class="text-left">
+<a class="btn btn-success" href="http://www.booking.com/hotel/us/les-artistes-inn.html?aid=330843;lang=en">Book Now</a>
+</div>

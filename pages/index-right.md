@@ -13,3 +13,7 @@ We are located between 11th and 12th street, at 1140 Camino Del Mar, behind Cafe
 ***All rooms at Secret Garden Inn are non-smoking.***
 
 ***All guests at Secret Garden Inn must check in at Les Artistes Inn.***
+
+<div class="text-right">
+<a class="btn btn-success" href="http://www.booking.com/hotel/us/secret-garden-inn-del-mar.html?aid=330843;lang=en">Book Now</a>
+</div>
