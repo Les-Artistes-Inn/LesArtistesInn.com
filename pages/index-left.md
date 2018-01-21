@@ -14,6 +14,6 @@ Rates are from $135.00 to $250.00 per night plus tax. Winter rates are typically
 
 ***All rooms at Les Artistes Inn are non-smoking.***
 
-<div class="text-left">
+<div class="text-center text-md-left mb-4">
 <a class="btn btn-success" href="http://www.booking.com/hotel/us/les-artistes-inn.html?aid=330843;lang=en">Book Now</a>
 </div>
