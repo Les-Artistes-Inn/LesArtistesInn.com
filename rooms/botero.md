@@ -4,6 +4,6 @@ layout: page
 side: left
 ---
 
-The Botero room is a ground floor room that uses the art of Fernando Botero, the Columbian painter, for inspiration.
+The Botero room is a ground floor room that uses the art of Fernando Botero, the Colombian painter, for inspiration.
 
-It has hardwood floors, a bathroom with shower, two queen size beds, and a back deck overlooking the garden. It is a little more roomy than the other rooms.
+It has hardwood floors, a bathroom with shower, two queen size beds, and a back deck overlooking the garden. It is a little more spacious than the other rooms.
