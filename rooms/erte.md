@@ -2,6 +2,7 @@
 title: Erte
 layout: page
 side: left
+order: 3
 ---
 
 The Russian-born painter Romain de Tirtoff moved to Paris and became one of the preeminent art-deco painters of the 1920s.

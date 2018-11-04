@@ -2,6 +2,7 @@
 title: Zen
 layout: page
 side: left
+order: 12
 ---
 
 The Zen room, like the Furo, uses influence from Japanese masters, in this case, master woodworkers.

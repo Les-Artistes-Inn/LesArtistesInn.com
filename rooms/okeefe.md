@@ -2,6 +2,7 @@
 title: O'Keefe
 layout: page
 side: left
+order: 7
 ---
 
 Georgia O'Keefe, the famous female artist, was born in New York, but spent most of her adult life in New Mexico. The southwest influence is visible in her artwork, and in the design of the room.

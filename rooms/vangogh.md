@@ -2,6 +2,7 @@
 title: Van Gogh
 layout: page
 side: left
+order: 10
 ---
 
 The Van Gogh image of the Yellow House assisted in creating the colors and light found in this room.

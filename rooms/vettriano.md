@@ -2,6 +2,7 @@
 title: Vettriano
 layout: page
 side: left
+order: 11
 ---
 
 The Vettriano room is one of our most recent renovations, using the beach scenes of Jack Vettriano for inspiration.

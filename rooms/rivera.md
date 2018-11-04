@@ -2,6 +2,7 @@
 title: Rivera
 layout: page
 side: left
+order: 9
 ---
 
 Diego Rivera was a famous Mexican painter, active communist, and husband of Frida Kahlo. As if that was not enough, he was the preeminent muralist of the Mexican mural movement.

@@ -2,6 +2,7 @@
 title: Gaugin
 layout: page
 side: left
+order: 5
 ---
 
 The Gauguin room uses the art and style of Paul Gaugin during his Tahitian period for inspiration.
