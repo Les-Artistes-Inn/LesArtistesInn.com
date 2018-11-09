@@ -8,20 +8,21 @@ layout: default
   {%- for file in site.static_files -%}
     {%- assign all_static_files = all_static_files | append: file.path | append: "<br>" -%}
   {%- endfor -%}
-  {% if all_static_files contains page_image_dir %}
+  {%- if all_static_files contains page_image_dir -%}
+    {%- capture page_images -%}
+      {%- for file in site.static_files -%}
+        {%- if file.extname == ".jpg" and file.path contains page_image_dir -%}
+          {%- unless file.path contains "_large" -%}
+            {{ file.path | append: "<br>" }}
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- assign page_images_array = page_images | split: "<br>" -%}
     <div class="mb-3 row justify-content-center align-items-center">
-  {% endif %}
-  {%- for file in site.static_files -%}
-    {%- if file.extname == ".jpg" and file.path contains page_image_dir -%}
-      {%- unless file.path contains "_large" -%}
-        {%- assign file_large = file.path | remove_first: ".jpg" | append: "_large" -%}
-        {% if all_static_files contains file_large %}
-          <img src="{{ file.path }}" alt="{{ page.title }} {{ file.path | remove_first: page_image_dir | remove_first: "/" | remove_first: ".jpg" }}"/>
-        {% endif %}
-      {%- endunless -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {% if all_static_files contains page_image_dir %}
+    {%- for image_path in page_images_array -%}
+      <img src="{{ image_path }}" alt="{{ page.title }} {{ forloop.index }}"/>
+    {%- endfor -%}
     </div>
   {% endif %}
 
