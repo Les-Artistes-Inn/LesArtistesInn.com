@@ -19,9 +19,14 @@ layout: default
       {%- endfor -%}
     {%- endcapture -%}
     {%- assign page_images_array = page_images | split: "<br>" -%}
-    <div class="mb-3 row justify-content-center align-items-center">
+    <div class="d-flex align-items-center justify-content-center">
+      <img src="{{ page_images_array[0] }}" alt="{{ page.title }} 1" class="mw-100"/>
+    </div>
+    <div class="table-responsive-sm w-auto d-flex row flex-nowrap flex-sm-wrap mb-3 align-items-center">
     {%- for image_path in page_images_array -%}
-      <img src="{{ image_path }}" alt="{{ page.title }} {{ forloop.index }}"/>
+      {%- unless forloop.first -%}
+      <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
+      {%- endunless -%}
     {%- endfor -%}
     </div>
   {% endif %}
