@@ -3,9 +3,9 @@ layout: default
 ---
 <article>
 
-  {%- assign page_image_dir = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" | prepend: "/assets/images/" -%}
-  {%- assign page_image_dir_small = page_image_dir | append: "/small" -%}
-  {%- assign page_image_dir_medium = page_image_dir | append: "/medium" -%}
+  {%- assign page_image_dir = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" | prepend: "/images/" -%}
+  {%- assign page_image_dir_small = page_image_dir | append: "/small" | prepend: "/assets" -%}
+  {%- assign page_image_dir_medium = page_image_dir | append: "/medium" | prepend: "/assets" -%}
   {%- assign all_static_files = "" -%}
   {%- for file in site.static_files -%}
     {%- assign all_static_files = all_static_files | append: file.path | append: "<br>" -%}
@@ -14,9 +14,11 @@ layout: default
     {%- capture page_images -%}
       {%- for file in site.static_files -%}
         {%- if file.extname == ".jpg" and file.path contains page_image_dir -%}
-          {%- unless file.path contains "large" -%}
+          {%- unless file.path contains "small" -%}
             {%- unless file.path contains "medium" -%}
-              {{ file.path | append: "<br>" }}
+              {%- unless file.path contains "large" -%}
+                {{ file.path | append: "<br>" }}
+              {%- endunless -%}
             {%- endunless -%}
           {%- endunless -%}
         {%- endif -%}

@@ -20,170 +20,254 @@ city_right: Del Mar, CA 92014
 # image resizing configuration below
 mini_magick:
   architecture_les_artistes_small:
-    source: assets/images/architecture_les_artistes
+    source: images/architecture_les_artistes
     destination: assets/images/architecture_les_artistes/small
     resize: "1x90^"
   architecture_les_artistes_medium:
-    source: assets/images/architecture_les_artistes
+    source: images/architecture_les_artistes
     destination: assets/images/architecture_les_artistes/medium
     resize: "1x212^"
+  architecture_les_artistes_large:
+    source: images/architecture_les_artistes
+    destination: assets/images/architecture_les_artistes/large
+    resize: "1x720^"
   architecture_secret_garden_small:
-    source: assets/images/architecture_secret_garden
+    source: images/architecture_secret_garden
     destination: assets/images/architecture_secret_garden/small
     resize: "1x90^"
   architecture_secret_garden_medium:
-    source: assets/images/architecture_secret_garden
+    source: images/architecture_secret_garden
     destination: assets/images/architecture_secret_garden/medium
     resize: "1x212^"
+  architecture_secret_garden_large:
+    source: images/architecture_secret_garden
+    destination: assets/images/architecture_secret_garden/large
+    resize: "1x720^"
   botero_small:
-    source: assets/images/botero
+    source: images/botero
     destination: assets/images/botero/small
     resize: "1x90^"
   botero_medium:
-    source: assets/images/botero
+    source: images/botero
     destination: assets/images/botero/medium
     resize: "1x212^"
+  botero_large:
+    source: images/botero
+    destination: assets/images/botero/large
+    resize: "1x720^"
   courtyard_les_artistes_small:
-    source: assets/images/courtyard_les_artistes
+    source: images/courtyard_les_artistes
     destination: assets/images/courtyard_les_artistes/small
     resize: "1x90^"
   courtyard_les_artistes_medium:
-    source: assets/images/courtyard_les_artistes
+    source: images/courtyard_les_artistes
     destination: assets/images/courtyard_les_artistes/medium
     resize: "1x212^"
+  courtyard_les_artistes_large:
+    source: images/courtyard_les_artistes
+    destination: assets/images/courtyard_les_artistes/large
+    resize: "1x720^"
   courtyard_secret_garden_small:
-    source: assets/images/courtyard_secret_garden
+    source: images/courtyard_secret_garden
     destination: assets/images/courtyard_secret_garden/small
     resize: "1x90^"
   courtyard_secret_garden_medium:
-    source: assets/images/courtyard_secret_garden
+    source: images/courtyard_secret_garden
     destination: assets/images/courtyard_secret_garden/medium
     resize: "1x212^"
+  courtyard_secret_garden_large:
+    source: images/courtyard_secret_garden
+    destination: assets/images/courtyard_secret_garden/large
+    resize: "1x720^"
   delempicka_small:
-    source: assets/images/delempicka
+    source: images/delempicka
     destination: assets/images/delempicka/small
     resize: "1x90^"
   delempicka_medium:
-    source: assets/images/delempicka
+    source: images/delempicka
     destination: assets/images/delempicka/medium
     resize: "1x212^"
+  delempicka_large:
+    source: images/delempicka
+    destination: assets/images/delempicka/large
+    resize: "1x720^"
   erte_small:
-    source: assets/images/erte
+    source: images/erte
     destination: assets/images/erte/small
     resize: "1x90^"
   erte_medium:
-    source: assets/images/erte
+    source: images/erte
     destination: assets/images/erte/medium
     resize: "1x212^"
+  erte_large:
+    source: images/erte
+    destination: assets/images/erte/large
+    resize: "1x720^"
   furo_small:
-    source: assets/images/furo
+    source: images/furo
     destination: assets/images/furo/small
     resize: "1x90^"
   furo_medium:
-    source: assets/images/furo
+    source: images/furo
     destination: assets/images/furo/medium
     resize: "1x212^"
+  furo_large:
+    source: images/furo
+    destination: assets/images/furo/large
+    resize: "1x720^"
   gaugin_small:
-    source: assets/images/gaugin
+    source: images/gaugin
     destination: assets/images/gaugin/small
     resize: "1x90^"
   gaugin_medium:
-    source: assets/images/gaugin
+    source: images/gaugin
     destination: assets/images/gaugin/medium
     resize: "1x212^"
+  gaugin_large:
+    source: images/gaugin
+    destination: assets/images/gaugin/large
+    resize: "1x720^"
   index_small:
-    source: assets/images/index
+    source: images/index
     destination: assets/images/index/small
     resize: "1x90^"
   index_medium:
-    source: assets/images/index
+    source: images/index
     destination: assets/images/index/medium
     resize: "1x212^"
+  index_large:
+    source: images/index
+    destination: assets/images/index/large
+    resize: "1x720^"
   lotus_small:
-    source: assets/images/lotus
+    source: images/lotus
     destination: assets/images/lotus/small
     resize: "1x90^"
   lotus_medium:
-    source: assets/images/lotus
+    source: images/lotus
     destination: assets/images/lotus/medium
     resize: "1x212^"
+  lotus_large:
+    source: images/lotus
+    destination: assets/images/lotus/large
+    resize: "1x720^"
   monet_small:
-    source: assets/images/monet
+    source: images/monet
     destination: assets/images/monet/small
     resize: "1x90^"
   monet_medium:
-    source: assets/images/monet
+    source: images/monet
     destination: assets/images/monet/medium
     resize: "1x212^"
+  monet_large:
+    source: images/monet
+    destination: assets/images/monet/large
+    resize: "1x720^"
   okeefe_small:
-    source: assets/images/okeefe
+    source: images/okeefe
     destination: assets/images/okeefe/small
     resize: "1x90^"
   okeefe_medium:
-    source: assets/images/okeefe
+    source: images/okeefe
     destination: assets/images/okeefe/medium
     resize: "1x212^"
+  okeefe_large:
+    source: images/okeefe
+    destination: assets/images/okeefe/large
+    resize: "1x720^"
   orchid_small:
-    source: assets/images/orchid
+    source: images/orchid
     destination: assets/images/orchid/small
     resize: "1x90^"
   orchid_medium:
-    source: assets/images/orchid
+    source: images/orchid
     destination: assets/images/orchid/medium
     resize: "1x212^"
+  orchid_large:
+    source: images/orchid
+    destination: assets/images/orchid/large
+    resize: "1x720^"
   penthouse_small:
-    source: assets/images/penthouse
+    source: images/penthouse
     destination: assets/images/penthouse/small
     resize: "1x90^"
   penthouse_medium:
-    source: assets/images/penthouse
+    source: images/penthouse
     destination: assets/images/penthouse/medium
     resize: "1x212^"
+  penthouse_large:
+    source: images/penthouse
+    destination: assets/images/penthouse/large
+    resize: "1x720^"
   remington_small:
-    source: assets/images/remington
+    source: images/remington
     destination: assets/images/remington/small
     resize: "1x90^"
   remington_medium:
-    source: assets/images/remington
+    source: images/remington
     destination: assets/images/remington/medium
     resize: "1x212^"
+  remington_large:
+    source: images/remington
+    destination: assets/images/remington/large
+    resize: "1x720^"
   rivera_small:
-    source: assets/images/rivera
+    source: images/rivera
     destination: assets/images/rivera/small
     resize: "1x90^"
   rivera_medium:
-    source: assets/images/rivera
+    source: images/rivera
     destination: assets/images/rivera/medium
     resize: "1x212^"
+  rivera_large:
+    source: images/rivera
+    destination: assets/images/rivera/large
+    resize: "1x720^"
   rose_small:
-    source: assets/images/rose
+    source: images/rose
     destination: assets/images/rose/small
     resize: "1x90^"
   rose_medium:
-    source: assets/images/rose
+    source: images/rose
     destination: assets/images/rose/medium
     resize: "1x212^"
+  rose_large:
+    source: images/rose
+    destination: assets/images/rose/large
+    resize: "1x720^"
   vangogh_small:
-    source: assets/images/vangogh
+    source: images/vangogh
     destination: assets/images/vangogh/small
     resize: "1x90^"
   vangogh_medium:
-    source: assets/images/vangogh
+    source: images/vangogh
     destination: assets/images/vangogh/medium
     resize: "1x212^"
+  vangogh_large:
+    source: images/vangogh
+    destination: assets/images/vangogh/large
+    resize: "1x720^"
   vettriano_small:
-    source: assets/images/vettriano
+    source: images/vettriano
     destination: assets/images/vettriano/small
     resize: "1x90^"
   vettriano_medium:
-    source: assets/images/vettriano
+    source: images/vettriano
     destination: assets/images/vettriano/medium
     resize: "1x212^"
+  vettriano_large:
+    source: images/vettriano
+    destination: assets/images/vettriano/large
+    resize: "1x720^"
   zen_small:
-    source: assets/images/zen
+    source: images/zen
     destination: assets/images/zen/small
     resize: "1x90^"
   zen_medium:
-    source: assets/images/zen
+    source: images/zen
     destination: assets/images/zen/medium
     resize: "1x212^"
+  zen_large:
+    source: images/zen
+    destination: assets/images/zen/large
+    resize: "1x720^"
