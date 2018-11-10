@@ -4,6 +4,8 @@ layout: default
 <article>
 
   {%- assign page_image_dir = page.path | remove_first: "pages/" | remove_first: "rooms/" | remove_first: ".md" | prepend: "/assets/images/" -%}
+  {%- assign page_image_dir_small = page_image_dir | append: "/small" -%}
+  {%- assign page_image_dir_medium = page_image_dir | append: "/medium" -%}
   {%- assign all_static_files = "" -%}
   {%- for file in site.static_files -%}
     {%- assign all_static_files = all_static_files | append: file.path | append: "<br>" -%}
@@ -12,8 +14,10 @@ layout: default
     {%- capture page_images -%}
       {%- for file in site.static_files -%}
         {%- if file.extname == ".jpg" and file.path contains page_image_dir -%}
-          {%- unless file.path contains "_large" -%}
-            {{ file.path | append: "<br>" }}
+          {%- unless file.path contains "large" -%}
+            {%- unless file.path contains "medium" -%}
+              {{ file.path | append: "<br>" }}
+            {%- endunless -%}
           {%- endunless -%}
         {%- endif -%}
       {%- endfor -%}
@@ -21,12 +25,12 @@ layout: default
     {%- assign page_images_array = page_images | split: "<br>" -%}
   <div class="row justify-content-center mb-sm-3">
     <div class="col-12 col-md-6 px-0 d-flex justify-content-center justify-content-md-end">
-      <img src="{{ page_images_array[0] }}" alt="{{ page.title }} 1" class="mw-100"/>
+      <img src="{{ page_images_array[0] | replace_first: page_image_dir, page_image_dir_medium }}" alt="{{ page.title }} 1" class="mw-100"/>
     </div>
     <div class="col-12 col-sm-8 col-md-6 px-0 table-responsive-sm w-auto d-flex flex-nowrap flex-sm-wrap justify-content-sm-center justify-content-md-start pb-2 pb-sm-0">
      {%- for image_path in page_images_array -%}
        {%- unless forloop.first -%}
-       <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
+       <img src="{{ image_path | replace_first: page_image_dir, page_image_dir_small }}" alt="{{ page.title }} {{ forloop.index }}"/>
        {%- endunless -%}
      {%- endfor -%}
    </div>

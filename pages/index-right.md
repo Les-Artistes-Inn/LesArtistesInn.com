@@ -3,7 +3,7 @@ published: false
 ---
 
 <div class="d-flex justify-content-center">
-<img src="/assets/images/index/2.jpg" alt="Secret Garden Inn" class="mw-100">
+<img src="/assets/images/index/medium/2.jpg" alt="Secret Garden Inn" class="mw-100">
 </div>
 
 # Welcome to Secret Garden!
