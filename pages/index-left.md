@@ -2,8 +2,8 @@
 published: false
 ---
 
-<div class="d-flex justify-content-center" markdown="1">
-![Les Artistes Inn](/assets/images/index/1.jpg)
+<div class="d-flex justify-content-center">
+<img src="/assets/images/index/1.jpg" alt="Les Artistes Inn" class="mw-100">
 </div>
 
 # Welcome to Les Artistes!

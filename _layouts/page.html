@@ -19,23 +19,25 @@ layout: default
       {%- endfor -%}
     {%- endcapture -%}
     {%- assign page_images_array = page_images | split: "<br>" -%}
-    <div class="d-flex align-items-center justify-content-center">
-      <img src="{{ page_images_array[0] }}" alt="{{ page.title }} 1" class="mw-100"/>
+    <div class="row justify-content-center mb-3">
+      <div class="col-12 col-md-6 p-0 d-flex justify-content-center justify-content-md-end">
+        <img src="{{ page_images_array[0] }}" alt="{{ page.title }} 1" class="mw-100"/>
+      </div>
+      <div class="col-12 col-sm-8 col-md-6 p-0 table-responsive-sm w-auto d-flex flex-nowrap flex-sm-wrap justify-content-sm-center justify-content-md-start">
+      {%- for image_path in page_images_array -%}
+        {%- unless forloop.first -%}
+        <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
+        {%- endunless -%}
+      {%- endfor -%}
+      </div>
     </div>
-    <div class="table-responsive-sm w-auto d-flex row flex-nowrap flex-sm-wrap mb-3 align-items-center">
-    {%- for image_path in page_images_array -%}
-      {%- unless forloop.first -%}
-      <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
-      {%- endunless -%}
-    {%- endfor -%}
-    </div>
-  {% endif %}
+  {%- endif -%}
 
   <header>
     <h1 {% if page.subtitle %}class="mb-0"{% endif %}>{{ page.title | escape }}</h1>
-    {% if page.subtitle %}
+    {%- if page.subtitle -%}
       <h2 class="h5 font-italic">{{ page.subtitle | escape }}</h2>
-    {% endif %}
+    {%- endif -%}
   </header>
 
   <div>
