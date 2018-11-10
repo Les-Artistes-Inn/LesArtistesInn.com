@@ -23,43 +23,13 @@ layout: default
     <div class="col-12 col-md-6 p-0 d-flex justify-content-center justify-content-md-end">
       <img src="{{ page_images_array[0] }}" alt="{{ page.title }} 1" class="mw-100"/>
     </div>
-    <div class="col-12 col-md-6 p-0 d-flex flex-wrap justify-content-center justify-content-md-start">
-      {%- if page_images_array.size >= 2 -%}
-      <div class="d-flex">
-      {%- for image_path in page_images_array -%}
-        {%- if forloop.index >= 2 and forloop.index <= 5 -%}
-        <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
-        {%- endif -%}
-        {%- if forloop.index == 3 -%}
-          </div><div class="d-flex">
-        {%- endif -%}
-      {%- endfor -%}
-      </div>
-      {%- endif -%}
-    </div>
-    {%- if page_images_array.size >= 6 -%}
-      {%- for image_path in page_images_array -%}
-        {%- if forloop.index >= 6 -%}
-          {%- assign current_index_even = forloop.index | modulo: 2 -%}
-          {%- assign current_index_mod_4 = forloop.index | modulo: 4 -%}
-          {%- if current_index_mod_4 >= 2 -%}
-            {%- assign current_justify_content = "justify-content-md-end" -%}
-          {%- else -%}
-            {%- assign current_justify_content = "justify-content-md-start" -%}
-          {%- endif -%}
-          {%- if current_index_even == 0 -%}
-            {%- unless forloop.index == 6 -%}
-              </div>
-            {%- endunless -%}
-            <div class="d-flex justify-content-center {{ current_justify_content }}">
-          {%- endif -%}
-          <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
-          {%- if forloop.last -%}
-            </div>
-          {%- endif -%}
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endif -%}
+    <div class="col-12 col-sm-8 col-md-6 p-0 table-responsive-sm w-auto d-flex flex-nowrap flex-sm-wrap justify-content-sm-center justify-content-md-start">
+     {%- for image_path in page_images_array -%}
+       {%- unless forloop.first -%}
+       <img src="{{ image_path | replace_first: '.jpg','.jpg' }}" alt="{{ page.title }} {{ forloop.index }}"/>
+       {%- endunless -%}
+     {%- endfor -%}
+   </div>
   </div>
   {%- endif -%}
 
