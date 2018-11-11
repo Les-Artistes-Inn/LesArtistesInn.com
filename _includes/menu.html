@@ -1,12 +1,12 @@
 <nav id="menu-{{ include.side }}" class="nav flex-column">
 
-  <a class="nav-link pt-0" href="{{ "/" | relative_url }}{%- if include.side == "right"-%}#right{%- endif -%}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
+  <a class="nav-link pt-0" href="{{ "/" | relative_url | remove_first: '.html' }}{%- if include.side == "right"-%}#right{%- endif -%}">{%- if include.side == "left" -%}{{ site.title_left }}{%- else -%}{{ site.title_right }}{%- endif -%}</a>
 
   {%- assign pages = site.pages | sort: "order" -%}
   {%- for page in pages -%}
     {%- if page.path contains "rooms/" -%}
       {% if page.side == include.side or page.side == "both" %}
-        <a class="nav-link py-0{% if include.side == "left" %} ml-4{% else if include.side == "right" %} mr-4{% endif %}" href="{{ page.url | relative_url }}">
+        <a class="nav-link py-0{% if include.side == "left" %} ml-4{% else if include.side == "right" %} mr-4{% endif %}" href="{{ page.url | relative_url | remove_first: '.html' }}">
           {{ page.title | escape }}
         </a>
       {% endif %}
@@ -19,7 +19,7 @@
         {%- if page.redirect_to -%}
           {%- assign link = page.redirect_to -%}
         {%- else -%}
-          {%- assign link = page.url | relative_url %}
+          {%- assign link = page.url | relative_url | remove_first: '.html' %}
         {%- endif -%}
         <a class="nav-link{% if include.side == "left" and first %}{% assign first = false %} mt-1{% endif %}" href="{{ link }}">
           {{ page.title | escape }}
