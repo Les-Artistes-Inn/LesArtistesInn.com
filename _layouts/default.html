@@ -21,15 +21,15 @@ layout: compress
     {%- endcapture -%}
     {%- assign image_replacement = image_replacement_string | split: '<>' -%}
     {%- for img_attributes in image_replacement -%}
-      {%- capture image_replacement_source -%}
-        <img{{ img_attributes }}/>
-      {%- endcapture -%}
+      {%- assign image_replacement_source = img_attributes | prepend: '<img' | append: '/>' -%}
       {%- assign image_url = img_attributes | remove_first: ' src="' | split: '"' | first -%}
       {%- assign image_relative_url = image_url | relative_url -%}
-      {%- assign image_replacement_url = image_url | replace_first: 'small','large' | replace_first: 'medium','large' -%}
-      {%- capture image_replacement_target -%}
-        <a href="{{ image_replacement_url | relative_url }}"><img{{ img_attributes | replace: image_url, image_relative_url }}/></a>
-      {%- endcapture -%}
+      {%- assign image_replacement_url = image_url | replace_first: 'small','large' | replace_first: 'medium','large' | relative_url -%}
+      {%- assign image_replacement_attributes = img_attributes | replace: image_url, image_relative_url -%}
+      {%- assign image_replacement_a_tag = image_replacement_url | prepend: '<a href="' | append: '">' -%}
+      {%- assign image_replacement_img_tag = image_replacement_attributes | prepend: '<img' | append: '/>' -%}
+      {%- assign image_replacement_a_close_tag = '</a>' -%}
+      {%- assign image_replacement_target = image_replacement_a_tag | append: image_replacement_img_tag | append: image_replacement_a_close_tag -%}
       {%- assign content = content | replace: image_replacement_source, image_replacement_target -%}
     {%- endfor -%}
 
