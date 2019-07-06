@@ -15,7 +15,7 @@ Each reservation is handled individually so please call for more information.
 
 ## Pet Policy
 
-Pets are welcome at Les Artistes Inn only - by reservation and with the following agreements.
+Pets are welcome at Les Artistes Inn only by reservation and with the following agreements.
 
 Pets are not to be left alone in the room at any time.
 Owners will be responsible for their pets' behavior at all times.
