@@ -1,6 +1,12 @@
 {% macro resize(src, height=false, width=false, max_width=false) %}
 {%- if max_width -%}
-    {% set image_full = resize_image(path = src, width = max_width, op = 'fit_width') %}
+    {%- set image = get_image_metadata(path = src) -%}
+    {%- if image.width > max_width -%}
+        {%- set target_width = max_width -%}
+    {%- else -%}
+        {%- set target_width = image.width -%}
+    {%- endif -%}
+    {%- set image_full = resize_image(path = src, width = max_width, op = 'fit_width') -%}
     {%- set output = image_full.url -%}
 {%- else -%}
     {%- set image_1x = resize_image(path = src, width = width, height = height, op = 'fill') -%}
