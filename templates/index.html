@@ -1,0 +1,9 @@
+{% extends "default.html" %}
+
+{% block main %}
+    <main class="m:content d-flex" aria-label="Content">
+        <div class="w-50 mx-3">
+            {{ section.content | safe }}
+        </div>
+    </main>
+{% endblock %}

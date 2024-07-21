@@ -1,0 +1,14 @@
+{% macro seo(page) %}
+<meta property="og:title" content="{{ page.title }}">
+{% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:description" content="{{ page.description }}">
+{% endif %}
+<link rel="canonical" href="{{ get_url(path = page.path) | safe }}">
+<meta property="og:url" content="{{ get_url(path = page.path) | safe }}">
+<meta property="og:site_name" content="{{ config.extra.title }}">
+<meta property="og:image" content="{{ get_url(path = 'siteicon.png') | safe }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="{{ get_url(path = 'siteicon.png') | safe }}">
+<meta property="twitter:title" content="{{ page.title }}">
+{% endmacro %}

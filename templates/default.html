@@ -1,0 +1,32 @@
+{% import "macros/seo.html" as seo %}
+{% import "macros/menu.html" as menu %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Judson" rel="stylesheet">
+        <link rel="stylesheet" href="{{ get_url(path = 'main.css') | safe }}">
+
+        <link rel="shortcut icon" type="image/x-icon" href="{{ get_url(path = 'favicon.ico') }}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ get_url(path = 'apple-touch-icon.png') }}" type="image/png">
+
+        <title>{{ page.title | default(value = config.extra.title) }}</title>
+
+        {{ seo::seo(page = page | default(value = section)) }}
+    </head>
+
+    <body>
+        {% include "includes/header.html" %}
+
+        <div class="container m:container d-flex justify-center flex-wrap r:flex-nowrap mt-2">
+            {{ menu::menu(side='left') }}
+            {{ menu::menu(side='right') }}
+            {% include "includes/separator.html" %}
+            {% block main %}{% endblock main %}
+        </div>
+    </body>
+
+</html>

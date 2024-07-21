@@ -1,0 +1,27 @@
+{% import "macros/image.html" as image %}
+
+{% extends "default.html" %}
+
+{% block main %}
+    {% if page.extra.side %}
+        <main class="m:content d-flex" aria-label="Content">
+            <div class="w-50 mx-3{% if page.extra.side == 'right' %} order-last{% endif %}">
+                {{ page.content | safe }}
+            </div>
+            <div class="w-50 mx-3">
+                [images]
+            </div>
+        </main>
+    {% else %}
+        <main class="m:content mx-3" aria-label="Content">
+            {% if page.extra.images %}
+                {{ image::images(names = page.extra.images, page_name = page.title) }}
+            {% endif %}
+            <h1{% if page.extra.subtitle %} class="mb-1"{% endif %}>{{ page.title }}</h1>
+            {% if page.extra.subtitle %}
+                <h2>{{ page.extra.subtitle }}</h2>
+            {% endif %}
+            {{ page.content | safe }}
+        </main>
+    {% endif %}
+{% endblock %}

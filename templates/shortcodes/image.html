@@ -1,0 +1,8 @@
+{%- set image_1x = resize_image(path = section.path ~ src, width = width, height = height, op = 'fill') -%}
+{%- set image_2x = resize_image(path = section.path ~ src, width = 2 * width, height = 2 * height, op = 'fill') -%}
+{%- set image_3x = resize_image(path = section.path ~ src, width = 3 * width, height = 3 * height, op = 'fill') -%}
+{%- set image_full = resize_image(path = section.path ~ src, width = max_width, op = 'fit_width') -%}
+{%- set output = 'src="' ~ image_1x.url ~ '" srcset="' ~ image_3x.url ~ ' 3x, ' ~ image_2x.url ~ ' 2x, ' ~ image_1x.url ~ ' 1x"' -%}
+<a class="d-contents" href="{{ image_full.url | safe }}">
+    <img {% if class %}class="{{ class }}" {% endif %}alt="{{ alt | safe }}" {{ output | safe }}>
+</a>

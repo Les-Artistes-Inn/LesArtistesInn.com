@@ -1,0 +1,40 @@
+<header class="t:header container">
+    <div class="d-flex flex-column r:flex-row items-start justify-start">
+        <a class="d-contents" href="{{ get_url(path = '/') | safe }}">
+            <img class="t:logo-left" alt="Les Artistes Inn" src="{{ get_url(path = 'logo-left.svg') | safe }}">
+            <img class="t:logo-right" alt="and Secret Garden Inn" src="{{ get_url(path = 'logo-right.svg') | safe }}">
+        </a>
+    </div>
+    <div class="d-flex flex-row items-end justify-between">
+        <div>
+            <p class="t:subtitle my-0 text-left d-none r:d-block">
+                {{ config.extra.subtitle_left }}
+            </p>
+            <p class="my-0 text-left">
+                {{ config.extra.address_left }}
+            <br>
+                {{ config.extra.city_left }}
+            </p>
+        </div>
+        <div>
+            <img class="t:email" alt="Email" src="{{ get_url(path = 'logo-email.svg') | safe }}">
+            <p class="my-0 text-right r:text-center">
+                {{ config.extra.phone_middle }}
+            </p>
+        </div>
+        <div class="d-none r:d-block">
+            <p class="t:subtitle my-0 text-right ">
+                {{ config.extra.subtitle_right }}
+            </p>
+            <p class="my-0 text-right ">
+                {{ config.extra.address_right }}
+            <br>
+                {{ config.extra.city_right }}
+            </p>
+        </div>
+    </div>
+    <nav class="n:button">
+        <input id="nav" type="checkbox" class="n:check"/>
+        <label for="nav" aria-label="button" class="n:icon d-inline-block r:d-none m-1"></label>
+    </nav>
+</header>

@@ -1,0 +1,28 @@
+{% macro resize(src, height=false, width=false, max_width=false) %}
+{%- if max_width -%}
+    {% set image_full = resize_image(path = src, width = max_width, op = 'fit_width') %}
+    {%- set output = image_full.url -%}
+{%- else -%}
+    {%- set image_1x = resize_image(path = src, width = width, height = height, op = 'fill') -%}
+    {%- set image_2x = resize_image(path = src, width = 2 * width, height = 2 * height, op = 'fill') -%}
+    {%- set image_3x = resize_image(path = src, width = 3 * width, height = 3 * height, op = 'fill') -%}
+    {%- set output = 'src="' ~ image_1x.url ~ '" srcset="' ~ image_3x.url ~ ' 3x, ' ~ image_2x.url ~ ' 2x, ' ~ image_1x.url ~ ' 1x"' -%}
+{%- endif -%}
+{{ output }}
+{% endmacro %}
+
+{% macro images(names, page_name) %}
+<div class="m:images mb-3">
+{% for name in names %}
+    {% if loop.first %}
+        {% set resized = image::resize(src = page.colocated_path ~ name, height = config.extra.image_medium.height, width = config.extra.image_medium.width) %}
+    {% else %}
+        {% set resized = image::resize(src = page.colocated_path ~ name, height = config.extra.image_small.height, width = config.extra.image_small.width) %}
+    {% endif %}
+    {% set resized_large = image::resize(src = page.colocated_path ~ name, max_width = config.extra.image_large.max_width) %}
+    <a href="{{ resized_large | safe }}">
+        <img alt="{{ page_name }} {{ loop.index }}" {{ resized | safe }}>
+    </a>
+{% endfor %}
+</div>
+{% endmacro %}

@@ -1,0 +1,19 @@
+$responsive-cutoff: 768px;
+
+$container-width: 1140px;
+$container-padding: 15px;
+
+$color-background: #eec;
+$color-text: #420;
+$color-button: #3a4;
+$color-black: #000;
+$color-white: #fff;
+
+@import "_reset.scss";
+@import "_color.scss";
+@import "_layout.scss";
+@import "_buttons.scss";
+@import "_utils.scss";
+@import "_responsive.scss";
+@import "_border.scss";
+@import "_main.scss";

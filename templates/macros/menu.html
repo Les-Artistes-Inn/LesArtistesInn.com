@@ -1,0 +1,32 @@
+{% macro menu(side) %}
+
+{%- if side == 'left' -%}
+    {% set title = config.extra.title_left %}
+    {% set margin = 'ml-4' %}
+{%- else -%}
+    {% set title = config.extra.title_right %}
+    {% set margin = 'mr-4' %}
+{%- endif -%}
+
+<nav class="n:menu-{{ side }} d-none flex-column b:d-flex r:d-flex {% if side=='right' %}r:order-last {% endif %}text-{{ side }}">
+    <a class="my-2" href="{{ get_url(path = '/') | safe }}">
+        {{ title }}
+    </a>
+
+    {% set room_section = get_section(path = config.extra.room_section) %}
+    {% set rooms = room_section.pages | filter(attribute = 'extra.' ~ side, value = true) | sort(attribute = 'extra.order') %}
+    {% for room in rooms %}
+        <a class="{{ margin }}" href="{{ get_url(path = room.path) | safe }}">
+            {{ room.title }}
+        </a>
+    {% endfor %}
+
+    {% set page_section = get_section(path = config.extra.page_section) %}
+    {% set pages = page_section.pages | filter(attribute = 'extra.' ~ side, value = true) | sort(attribute = 'extra.order') %}
+    {% for page in pages %}
+        <a class="my-2" href="{{ get_url(path = page.path) | safe }}">
+            {{ page.title }}
+        </a>
+    {% endfor %}
+</nav>
+{% endmacro %}

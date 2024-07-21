@@ -1,0 +1,118 @@
+.m\:content {
+  flex: 1 0;
+}
+.m\:images {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 408fr 196fr 196fr;
+  place-items: center;
+}
+.m\:images > *:first-child {
+  grid-row-start: span 2;
+}
+
+.t\:header {
+  color: var(--color-black);
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.t\:logo-left {
+  max-width: 90%;
+}
+.t\:logo-right {
+  content: url("logo-subtitle.svg");
+  max-width: 80%;
+  width: 30rem;
+}
+.t\:email {
+  width: 11rem;
+}
+.t\:subtitle {
+  font-size: 1.375rem;
+  font-weight: 500;
+}
+
+.t\:header:has(.n\:button .n\:check:checked) ~ .m\:container .b\:d-flex {
+  display: flex !important;
+}
+.t\:header:has(.n\:button .n\:check:checked) ~ .m\:container {
+  background-image: linear-gradient(transparent, var(--color-background) 2rem 100%);
+  position: relative;
+  top: -8rem;
+  z-index: 100;
+  padding-top: 3rem;
+}
+
+.n\:menu-left, .n\:menu-right {
+  min-width: 8rem;
+}
+.n\:menu-left {
+  margin-right: 0.5rem;
+}
+.n\:menu-right {
+  margin-left: 0.5rem;
+}
+.n\:button {
+  position: absolute;
+  z-index: 1000;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  background-color: var(--color-white);
+}
+.n\:check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.n\:icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-width='2.5' d='M5 8h22M5 16h22M5 24h22'/%3e%3c/svg%3e") !important;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  content: "";
+  background: 50%/100% 100% no-repeat;
+  cursor: pointer;
+}
+.n\:separator {
+  width: 90%;
+  border: 0.1rem solid color-mix(in srgb, var(--color-background), var(--color-black) 25%);
+  border-radius: 0.1rem;
+}
+
+@media (min-width: $responsive-cutoff) {
+  .t\:header {
+    border-left-width: 1rem;
+    border-right-width: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .t\:logo-left {
+    flex: 1 1 145rem;
+  }
+  .t\:logo-right {
+    flex: 1 1 176rem;
+    margin-bottom: -20%;
+    content: unset;
+    width: unset;
+  }
+  .t\:header:has(.n\:button .n\:check:checked) ~ .m\:container .b\:d-flex.r\:d-none {
+    display:none !important;
+  }
+  .t\:header:has(.n\:button .n\:check:checked) ~ .m\:container {
+    position: static;
+    padding-top: 0;
+  }
+  .n\:menu-left, .n\:menu-right {
+    position: static;
+    padding-top: 0;
+  }
+  .n\:menu-left {
+    margin-right: 0;
+  }
+  .n\:menu-right {
+    margin-left: 0;
+  }
+}

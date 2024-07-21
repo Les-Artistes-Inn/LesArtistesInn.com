@@ -1,0 +1,28 @@
+base_url = "https://lesartistesinn.com/"
+compile_sass = true
+build_search_index = false
+generate_feed = false
+minify_html = true
+
+[markdown]
+highlight_code = false
+smart_punctuation = true
+
+[extra]
+title = "Les Artistes Inn"
+description = "An Inspired Place to Stay"
+title_left = "Les Artistes Inn"
+subtitle_alternate = "And Secret Garden Inn of Del Mar"
+subtitle_left = "An Inspired Place to Stay"
+address_left = "944 Camino Del Mar"
+city_left = "Del Mar, CA 92014"
+phone_middle = "(858) 755-4646"
+title_right = "Secret Garden Inn"
+subtitle_right = "Of Del Mar, Bed & Breakfast"
+address_right = "1140 Camino Del Mar"
+city_right = "Del Mar, CA 92014"
+room_section = "rooms/_index.md"
+page_section = "_index.md"
+image_small = {height = 123, width = 164}
+image_medium = {height = 282, width = 376}
+image_large = {max_width = 1440}
