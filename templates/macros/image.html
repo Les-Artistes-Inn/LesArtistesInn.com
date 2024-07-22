@@ -26,8 +26,8 @@
         {% set resized = image::resize(src = page.colocated_path ~ name, height = config.extra.image_small.height, width = config.extra.image_small.width) %}
     {% endif %}
     {% set resized_large = image::resize(src = page.colocated_path ~ name, max_width = config.extra.image_large.max_width) %}
-    <a href="{{ resized_large | safe }}">
-        <img alt="{{ page_name }} {{ loop.index }}" {{ resized | safe }}>
+    <a class="d-contents" href="{{ resized_large | safe }}">
+        <img {%if loop.first %}class="m:image-large"{% endif %}alt="{{ page_name }} {{ loop.index }}" {{ resized | safe }}>
     </a>
 {% endfor %}
 </div>
