@@ -1,4 +1,4 @@
-base_url = "https://aterenin.github.io/LesArtistesInn.com/"
+base_url = "https://lesartistesinn.com/"
 compile_sass = true
 build_search_index = false
 generate_feed = false

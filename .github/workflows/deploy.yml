@@ -27,6 +27,8 @@ jobs:
         run: curl -fLsS "https://github.com/getzola/zola/releases/download/v0.18.0/zola-v0.18.0-x86_64-unknown-linux-gnu.tar.gz" | tar xzf - -C /usr/local/bin
       - name: Verify Zola binary
         run: echo "3530d2626c3adcdc5cfcbfab0b736751269acd6f5352eaf60c3e105d939c8e74  /usr/local/bin/zola" | shasum -a 256 -b -c --strict
+      - name: Modify URL
+        run: sed -i 's/lesartistesinn.com/aterenin.github.io\/LesArtistesInn.com/g' config.toml
       - name: Build website
         run: zola build
       - name: Upload artifact
