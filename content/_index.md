@@ -2,7 +2,7 @@
 title = "Les Artistes Inn"
 +++
 
-{{ image(class='mx-auto', alt = 'Les Artistes Inn', src = '1.jpg', height = 220, width = 330, max_width = 960) }}
+{{ image(class='mx-auto mb-3', alt = 'Les Artistes Inn', src = '1.jpg', height = 220, width = 330, max_width = 960) }}
 
 # Welcome to Les Artistes!
 
@@ -24,7 +24,7 @@ Rates vary according to season and demand. Winter rates are typically lower than
 
 
 
-{{ image(class='mx-auto', alt = 'Secret Garden Inn', src = '2.jpg', height = 220, width = 165, max_width = 720) }}
+{{ image(class='mx-auto mb-3', alt = 'Secret Garden Inn', src = '2.jpg', height = 220, width = 165, max_width = 720) }}
 
 # Welcome to Secret Garden!
 
