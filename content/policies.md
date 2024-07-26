@@ -3,7 +3,7 @@ title = "Our Policies"
 [extra]
 left = true
 right = true
-order = 2
+order = 3
 +++
 
 ***All rooms at Les Artistes Inn and Secret Garden Inn are non-smoking.***
