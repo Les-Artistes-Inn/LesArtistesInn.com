@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.repository != 'Les-Artistes-Inn/LesArtistesInn.com'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +29,7 @@ jobs:
       - name: Verify Zola binary
         run: echo "5a08302389d1ac6a54391984d414eba01b2b7b23d9ab410f51e87756ed0563bb  /usr/local/bin/zola" | shasum -a 256 -b -c --strict
       - name: Modify URL
-        run: sed -i 's/lesartistesinn.com/aterenin.github.io\/LesArtistesInn.com/g' config.toml
+        run: sed -i 's/lesartistesinn.com/${{ secrets.CURRENT_URL }}\/LesArtistesInn.com/g' config.toml
       - name: Build website
         run: zola build
       - name: Upload artifact
@@ -38,6 +39,7 @@ jobs:
           name: github-pages
           retention-days: 1
   deploy:
+    if: github.repository != 'Les-Artistes-Inn/LesArtistesInn.com'
     needs: build
     runs-on: ubuntu-latest
     environment:

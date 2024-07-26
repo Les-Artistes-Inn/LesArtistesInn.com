@@ -1,10 +1,23 @@
 name: Publish Website
 
 on: 
+  push:
+    branches:
+      - main
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "publish"
+  cancel-in-progress: true
 
 jobs:
   build:
+    if: github.repository == 'Les-Artistes-Inn/LesArtistesInn.com'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
