@@ -1,14 +1,6 @@
 .m\:content {
   flex: 1 0;
 }
-.m\:content img, .t\:header {
-  background-color: #ffffff;
-  background-clip: padding-box;
-  border-width: 1rem;
-  border-image: url("border.svg") 70 repeat;
-  border-color: #ffffff;
-  border-style: solid;
-}
 .m\:images {
   display: grid;
   max-width: 100%;
