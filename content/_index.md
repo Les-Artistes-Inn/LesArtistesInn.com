@@ -12,7 +12,7 @@ Rates vary according to season and demand. Winter rates are typically lower than
 
 ***All rooms at Les Artistes Inn are non-smoking.***
 
-{{ button(name = "Book Now", url = "http://www.booking.com/hotel/us/secret-garden-inn-del-mar.html?aid=330843") }}
+{{ button(name = "Book Now", url = "http://www.booking.com/hotel/us/les-artistes-inn.html") }}
 
 
 
@@ -35,4 +35,4 @@ We are located between 11th and 12th street, at 1140 Camino Del Mar, behind Cafe
 ***All guests at Secret Garden Inn must check in at Les Artistes Inn.***
 
 
-{{ button(name = "Book Now", url = "http://www.booking.com/hotel/us/secret-garden-inn-del-mar.html?aid=330843") }}
+{{ button(name = "Book Now", url = "http://www.booking.com/hotel/us/secret-garden-inn-del-mar.html") }}
