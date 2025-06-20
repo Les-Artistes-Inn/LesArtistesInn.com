@@ -1,5 +1,5 @@
 +++
-title = "Our Policies"
+title = "Policies and Disclosures"
 [extra]
 left = true
 right = true
@@ -25,3 +25,17 @@ There is a deposit requirement and cleaning fee.
 Please call for more information.
 
 ***Pets are not allowed at Secret Garden.***
+
+## Disclosures for Les Artistes Inn
+
+Les Artistes Inn is a twelve-unit boutique hotel with eight units that are accessible on the ground floor.
+Four room upstairs are accessible only by staircase, and there is no elevator available.
+Please call for more information.
+
+## Disclosures for Secret Garden Inn
+
+Secret Garden Inn is a privately-owned four-room bed and breakfast.
+There are no ground floor rooms available.
+All rooms are accessible only by stairs, and there is no elevator available.
+Our sister facility Les Artistes Inn has accessible ground floor units available.
+Please call for more information.
