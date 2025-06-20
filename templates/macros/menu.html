@@ -9,7 +9,7 @@
 {%- endif -%}
 
 <nav class="n:menu-{{ side }} d-none flex-column b:d-flex r:d-flex {% if side=='right' %}r:order-last {% endif %}text-{{ side }}">
-    <a class="my-2" href="{{ get_url(path = '/') | safe }}">
+    <a class="my-2 large font-weight-bold" href="{{ get_url(path = '/') | safe }}">
         {{ title }}
     </a>
 
