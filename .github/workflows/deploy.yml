@@ -66,3 +66,23 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy public --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+      - name: Delete old deployments
+        run: |-
+          API_URL="https://api.cloudflare.com/client/v4/accounts/$ACCOUNT_ID/pages/projects/$PROJECT_NAME/deployments"
+          response=$(curl -s -H "Authorization: Bearer $API_TOKEN" "$API_URL")
+          index=0
+          echo "$response" | jq -c '.result[] | {id: .id, created_on: .created_on}' | while read -r deployment; do
+            deployment_id=$(echo "$deployment" | jq -r '.id')
+            deployment_date=$(echo "$deployment" | jq -r '.created_on')
+            if [[ "$index" -eq 0 ]]; then
+              echo "Skipping active deployment $deployment_id from $deployment_date"
+            else
+              echo "Deleting deployment $deployment_id from $deployment_date"
+              curl -s -X DELETE -H "Authorization: Bearer $API_TOKEN" "$API_URL/$deployment_id"
+            fi
+            index=$((index+1))
+          done
+        env:
+          ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
